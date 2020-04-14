@@ -3,7 +3,7 @@
       return '';
 
  let message='';
- let arrName=new Array();
+ let arrRes=new Array();
 
 debugger
  if (names.indexOf('\n')>0){
@@ -13,20 +13,21 @@ debugger
   } else if(names.indexOf(';')>0){
     names = names.replace(';','\n')
   }
-  arrName = names.split('\n');
+  let arrName = names.split('\n');
   if (arrName.length > 1){
-   /*
+    debugger
+   
   	 for (var i = 0; i < arrName.length; i++) {
-  		  arrName.push(getEmailTo(arrName[i]) + '<br />');
+  		  arrRes.push(getEmailTo(arrName[i]) + '<br />');
   		  }
-      */
+      
   }
   else {
-    arrName[0] = getEmailTo(arrName[0]) + '<br />';;
+    arrRes[0] = getEmailTo(arrName[0]) + '<br />';;
   }
 
 
-  return arrName;
+  return arrRes;
 }
 function getEmailTo(nameEmail){
   debugger
