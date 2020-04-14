@@ -10,8 +10,8 @@ logToHtml(`<h1>JS Tester</h1>`);
 
 // Test Split Name email
 logToHtml(`<h3>Test Split Name Email function</h3>`);
-// let arrRes = NamesWithEmailSplit('ole hansen;oleh@test.dk');
-// logToHtml(arrRes[0]);
+//  let arrRes = NamesWithEmailSplit('ole hansen;oleh@test.dk');
+//  logToHtml(arrRes[0]);
 
 // Test Map Keys functions
 // logToHtml(`<h1>Test Map Keys function</h1>`);
