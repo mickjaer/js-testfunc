@@ -2,10 +2,10 @@
  if (names === undefined || names === null)
       return '';
 
- let message='';
+ 
  let arrRes=new Array();
 
-debugger
+ 
  if (names.indexOf('\n')>0){
    // contains newline as split, remove semicolon if exisit
     names = names.replace(';','')
@@ -15,7 +15,7 @@ debugger
   }
   let arrName = names.split('\n');
   if (arrName.length > 1){
-    debugger
+ 
    
   	 for (var i = 0; i < arrName.length; i++) {
   		  arrRes.push(getEmailTo(arrName[i]) + '<br />');
@@ -30,7 +30,7 @@ debugger
   return arrRes;
 }
 function getEmailTo(nameEmail){
-  debugger
+  
   if (nameEmail.indexOf(',') < 0) {
     return nameEmail;
   }
