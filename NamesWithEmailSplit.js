@@ -15,9 +15,11 @@ debugger
   }
   arrName = names.split('\n');
   if (arrName.length > 1){
+   /*
   	 for (var i = 0; i < arrName.length; i++) {
   		  arrName.push(getEmailTo(arrName[i]) + '<br />');
   		  }
+      */
   }
   else {
     arrName[0] = getEmailTo(arrName[0]) + '<br />';;
