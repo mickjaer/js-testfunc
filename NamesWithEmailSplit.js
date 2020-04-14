@@ -5,7 +5,7 @@
  let message='';
  let arrName=new Array();
 
-
+debugger
  if (names.indexOf('\n')>0){
    // contains newline as split, remove semicolon if exisit
     names = names.replace(';','')
@@ -27,7 +27,12 @@
   return arrName;
 }
 function getEmailTo(nameEmail){
-    let name = nameEmail.split(',');
+  debugger
+  if (nameEmail.indexOf(',') < 0) {
+    return nameEmail;
+  }
+
+  let name = nameEmail.split(',');
       if (name.length==2){
          return '<a href = "mailto:' + name[1].trim() + '">'+ name[0] + '</a>'; 
       } else {
