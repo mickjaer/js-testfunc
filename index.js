@@ -8,12 +8,30 @@ const appDiv = document.getElementById('app');
 
 logToHtml(`<h1>JS Tester</h1>`);
 
+// Test dato compare
+ logToHtml(`<h3>Test Date compare</h3>`);
+var expireDay = new Date(2020, 4, 12,10,8);
+var toDay = new Date();
+// Wed Apr 29 2020 22:00:00 GMT+0200 (Central European Summer Time)
+logToHtml('toDay: ' + toDay);
+logToHtml('expireDay: ' + expireDay);
+if (expireDay> toDay)
+  logToHtml('ExpireDay is after today');
+if (expireDay< toDay)
+  logToHtml('ExpireDay is before today');
+
+if (expireDay === toDay)
+  logToHtml('ExpireDay is equal today');
+
+//console.log(toDay)
+
+
 // Test Split Name email
-logToHtml(`<h3>Test Split Name Email function</h3>`);
-  let arrRes = NamesWithEmailSplit('ole hansen,oleh@test.dk\nSvend Petersen,svendp@test.dk');
-  arrRes.forEach((e)=>{
-     logToHtml(e);
-  })
+// logToHtml(`<h3>Test Split Name Email function</h3>`);
+//   let arrRes = NamesWithEmailSplit('ole hansen,oleh@test.dk\nSvend Petersen,svendp@test.dk');
+//   arrRes.forEach((e)=>{
+//      logToHtml(e);
+//   })
  
 
 // Test Map Keys functions
