@@ -4,18 +4,36 @@ import { NamesWithEmailSplit } from './NamesWithEmailSplit.js';
 import './style.css';
 
 // Write Javascript code!
-const appDiv = document.getElementById('app');
 
-logToHtml(`<h1>JS Tester</h1>`);
+/********************************** */
 
-test1();
+test2();
+async function test2(){
+  resetLogToHtmlText(`<h1>Test 2</h1>`);
+
+  // returnAfter(2000);
+  await   returnAfter(2000).then();
+  // console.log('hello');
+  logToHtml('returnAfter returned');
+
+
+}
+function returnAfter(millisec){
+  logToHtml('returnAfter called: ');
+  return new Promise(resolve => setTimeout(() => {logToHtml("returnAfter finished after " + millisec + ' millisec' )}, millisec));
+}
+/********************************** */
+
+// test1();
 
 async function test1(){
+  resetLogToHtmlText(`<h1>Test 1</h1>`);
   await TestPromise('test 1',3000);
   await TestPromise('test 2',2000);
   
-}
+  
 
+}
 async function TestPromise(text, number) {
   logToHtml('TestPromise called: text: '+ text + ' number:' + number );
   return new Promise(async (resolve, reject) => {
@@ -29,6 +47,9 @@ async function TestPromise(text, number) {
 
   });
 }
+
+
+
 // // Test dato compare
 //  logToHtml(`<h3>Test Date compare</h3>`);
 // var expireDay = new Date(2020, 4, 12,10,8);
@@ -65,7 +86,10 @@ async function TestPromise(text, number) {
 // });
 
 
-
+function resetLogToHtmlText(header=''){
+  const appDiv = document.getElementById('app');
+  appDiv.innerHTML=header;
+}
 function logToHtml(text, insertbreak = true) {
   if (text == '') return;
 
